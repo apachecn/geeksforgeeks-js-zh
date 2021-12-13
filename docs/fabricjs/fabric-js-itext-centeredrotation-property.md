@@ -1,0 +1,73 @@
+# 织物. js Itext 中心站属性
+
+> 原文:[https://www . geesforgeks . org/fabric-js-itext-centere station-property/](https://www.geeksforgeeks.org/fabric-js-itext-centeredrotation-property/)
+
+Fabric.js 是一个用于处理画布的 JavaScript HTML5 画布库。画布 Itext 是用于创建 Itext 实例的 fabric.js 类之一。画布 Itext 是指 Itext 是可移动的，可以根据需要拉伸。在本文中，我们将使用用于禁用画布 Itext 中的中心旋转的中心旋转属性。
+
+**接近**:
+
+*   首先导入 fabric.js 库。
+*   导入库后，在主体标签中创建一个包含 Itext 的画布块。
+*   之后，初始化一个由 Fabric 提供的 Canvas 和 Itext 类的实例。并使用中心旋转属性来禁用中心旋转。在此之后，在画布上渲染 Itext。
+
+**语法**:
+
+```html
+fabric.Itext (Itext , {
+    centeredRotation: boolean
+});
+```
+
+**参数**:该功能取单个参数，如上所述，描述如下:
+
+*   **中心站**:该参数取布尔值。
+
+**示例**:本示例使用 FabricJS 设置画布 Itext 的 centeredRotation 属性，如下例所示:
+
+## 超文本标记语言
+
+```html
+<!DOCTYPE html> 
+<html> 
+
+<head>
+  <!-- FabricJS CDN -->
+  <script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/fabric.js/3.6.2/fabric.min.js"> 
+  </script> 
+</head> 
+
+<body> 
+  <div style="text-align: center;width: 400px;"> 
+    <h1 style="color: green;"> 
+      GeeksforGeeks 
+    </h1>
+    <b> 
+      Fabric.js | Itext centeredRotation Property 
+    </b> 
+  </div> 
+
+  <div style="text-align: center;"> 
+    <canvas id="canvas" width="400" height="200"
+      style="border:1px solid green;"> 
+    </canvas> 
+  </div> 
+
+  <script> 
+    var canvas = new fabric.Canvas("canvas"); 
+
+    var geek = new fabric.IText('GeeksforGeeks', {
+        centeredRotation : false
+    });
+    console.log(geek.willDrawShadow())
+    canvas.add(geek);
+    canvas.centerObject(geek); 
+  </script> 
+</body> 
+
+</html>
+```
+
+**输出:**
+
+![](img/f327c2d39a2996798f82cd63894ac0a5.png)
