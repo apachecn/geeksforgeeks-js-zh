@@ -1,0 +1,71 @@
+# tensorflow . js TF . spectrum . FFT()函数
+
+> 原文:[https://www . geesforgeks . org/tensorflow-js-TF-spectral-FFT-function/](https://www.geeksforgeeks.org/tensorflow-js-tf-spectral-fft-function/)
+
+**Tensorflow.js** 是谷歌开发的开源库，用于在浏览器或节点环境下运行机器学习模型和深度学习神经网络。
+
+**TF . spectrum . FFT()**函数用于 **FFT** (快速傅立叶变换)，即它在输入的最内部维度上计算指定的一维 **DFT** (离散傅立叶变换)。
+
+**语法:**
+
+```
+tf.spectral.fft(input)
+```
+
+**参数:**
+
+*   **输入:**正在执行 fft 的复数输入。
+
+**返回值:**返回输入最内部维度上指定一维离散傅立叶变换的计算结果。
+
+**例 1:**
+
+## Javascript
+
+```
+// Importing the tensorflow.js library
+import * as tf from "@tensorflow/tfjs"
+
+// Initializing a real and imaginary 1D input values
+const real = tf.tensor1d([1]);
+const imag = tf.tensor1d([2]);
+const x = tf.complex(real, imag);
+
+// Calling the .spectral.fft() function
+// over the input parameter value x
+tf.spectral.fft(x).print();
+```
+
+**输出:**
+
+```
+Tensor
+    [1 + 2j]
+```
+
+**例二:**
+
+## Javascript
+
+```
+// Importing the tensorflow library
+import * as tf from "@tensorflow/tfjs"
+
+// Using a real and imaginary 1D input values as the
+// parameter for the .complex() function
+const x = tf.complex(tf.tensor1d([1, 3, 5]), tf.tensor1d([2, 4, 6]));
+
+// Calling the .spectral.fft() function
+// over the input parameter value x
+tf.spectral.fft(x).print();
+```
+
+**输出:**
+
+```
+Tensor
+   [9 + 12j, -4.7320504 + -1.2679477j, 
+   -1.2679505 + -4.7320504j]
+```
+
+**参考:**T2】https://js.tensorflow.org/api/latest/#spectral.fft
